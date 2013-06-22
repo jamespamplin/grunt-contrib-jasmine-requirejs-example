@@ -1,10 +1,21 @@
-'use strict';
+define(function() {
+
+	'use strict';
 
 
-function Song() {
-}
+	function Song(artist, title) {
+		this.artist = artist;
+		this.title = title;
+	}
 
-Song.prototype.persistFavoriteStatus = function(value) {
-  // something complicated
-  throw new Error("not yet implemented");
-};
+	Song.prototype.isFavourited = function() {
+		return this.favourited === true;
+	};
+
+
+	Song.prototype.persistFavoriteStatus = function(value) {
+		this.favourited = value;
+	};
+
+	return Song;
+});

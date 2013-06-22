@@ -1,6 +1,8 @@
-# grunt-contrib-jasmine-example [![Build Status](https://secure.travis-ci.org/jsoverson/grunt-contrib-jasmine-example.png?branch=master)](http://travis-ci.org/jsoverson/grunt-contrib-jasmine-example)
+# grunt-contrib-jasmine-requirejs-example
 
-> Example application using grunt-contrib-jasmine
+> Example application using [grunt-contrib-jasmine] and [grunt-template-jasmine-requirejs].
+
+Cloned from Jarrod Overson's [grunt-contrib-jasmine-example].
 
 ## Getting Started
 _If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
@@ -34,9 +36,6 @@ grunt.registerTask('test', ['jshint', 'jasmine']);
 [grunt]: http://gruntjs.com/
 [Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md
 [package.json]: https://npmjs.org/doc/json.html
-
-
-## Release History
-
- * 2012-11-08 - v0.1.0 - Initial release
-
+[grunt-contrib-jasmine]: https://github.com/gruntjs/grunt-contrib-jasmine
+[grunt-template-jasmine-requirejs]: https://github.com/jsoverson/grunt-template-jasmine-requirejs
+[grunt-contrib-jasmine-example]: https://github.com/jsoverson/grunt-contrib-jasmine-example
