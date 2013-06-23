@@ -1,4 +1,5 @@
-# grunt-contrib-jasmine-requirejs-example
+# grunt-contrib-jasmine-requirejs-example [![Build Status](https://travis-ci.org/jamespamplin/grunt-contrib-jasmine-requirejs-example.png)](https://travis-ci.org/jamespamplin/grunt-contrib-jasmine-requirejs-example)
+
 
 > Example application using [grunt-contrib-jasmine] and [grunt-template-jasmine-requirejs].
 
