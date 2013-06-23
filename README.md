@@ -5,33 +5,55 @@
 Cloned from Jarrod Overson's [grunt-contrib-jasmine-example].
 
 ## Getting Started
-_If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
+- Clone this repo locally.
+- If you haven't installed [grunt] yet, check out the [Getting Started] guide, or: `npm install -g grunt-cli`
+- Install dependencies by running: `npm install`
+- Run the Jasmine tests with: `grunt jasmine`
 
-From the same directory as your project's [Gruntfile][Getting Started] and [package.json][], install the project's dependencies
+### Test task
+A grunt task has been setup to run jshint and jasmine tests - useful for CI.
+- Run the tests with: `grunt test`
 
-```bash
-npm install
+
+Project has also configured [package.json] to run the test tasks by running: `npm test`
+
+## Test setup
+Test specs are within the `spec/` directory. Spec files are wrapped in a define method requiring the module to be tested as a dependency.
+
+For example, the spec testing the `player.js` module:
+```js
+define(['player'], function(player) {
+	describe('player module', function() {
+		it('should do something with a player object', function() {
+			var testPlayer = new player();
+
+			expect(testPlayer.isPlaying).toBeFalsy();
+		});
+	});
+});
 ```
 
-Once that's done, you can run the jasmine unit tests via
+Generally, spec files should only test a single js module. Ideally, module dependencies should be mocked or stubbed so that the module can be tested in isolation.
+
+[grunt-contrib-jasmine] handles automatic creation of the Jasmine test runner and [grunt-template-jasmine-requirejs] will setup requiring of spec files and module sources. This is all configured within `Gruntfile.js`.
 
 ```js
-grunt jasmine
+grunt.initConfig({
+    jasmine : {
+        src : 'src/**/*.js',
+        options : {
+            specs : 'spec/**/*.js',
+            template: require('grunt-template-jasmine-requirejs'),
+            templateOptions: {
+                requireConfig: {
+                        baseUrl: ''
+                }
+            }
+        }
+    }
+})
 ```
 
-`package.json` allows you to define the script to execute when you run 'npm test'
-
-```json
-"scripts": {
-  "test": "grunt test"
-},
-```
-
-`grunt test` is registered to run `['jshint', 'jasmine']` to thoroughly test your code.
-
-```js
-grunt.registerTask('test', ['jshint', 'jasmine']);
-```
 
 [grunt]: http://gruntjs.com/
 [Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md
