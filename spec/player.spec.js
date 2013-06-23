@@ -10,7 +10,7 @@ define(['src/Player'], function(Player) {
             player = new Player();
 
             // mock out a song object with a jasmine spy
-            song = jasmine.createSpyObj('song', ['persistFavoriteStatus']);
+            song = jasmine.createSpyObj('song', ['persistFavouriteStatus']);
         });
 
         it('should be able to play a Song', function() {
@@ -47,7 +47,7 @@ define(['src/Player'], function(Player) {
             player.play(song);
             player.makeFavorite();
 
-            expect(song.persistFavoriteStatus).toHaveBeenCalledWith(true);
+            expect(song.persistFavouriteStatus).toHaveBeenCalledWith(true);
         });
 
         //demonstrates use of expected exceptions

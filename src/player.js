@@ -23,7 +23,7 @@ define(function() {
     };
 
     Player.prototype.makeFavorite = function() {
-        this.currentlyPlayingSong.persistFavoriteStatus(true);
+        this.currentlyPlayingSong.persistFavouriteStatus(true);
     };
 
     return Player;

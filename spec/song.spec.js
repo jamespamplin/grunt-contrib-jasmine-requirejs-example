@@ -13,7 +13,7 @@ define(['src/Song'], function(Song) {
 
 			expect(song.isFavourited()).toBe(false);
 
-			song.persistFavoriteStatus(true);
+			song.persistFavouriteStatus(true);
 
 			expect(song.isFavourited()).toBe(true);
 		});

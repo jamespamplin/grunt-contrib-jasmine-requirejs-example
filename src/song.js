@@ -13,7 +13,7 @@ define(function() {
 	};
 
 
-	Song.prototype.persistFavoriteStatus = function(value) {
+	Song.prototype.persistFavouriteStatus = function(value) {
 		this.favourited = value;
 	};
 
