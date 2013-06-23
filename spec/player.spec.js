@@ -1,6 +1,6 @@
 'use strict';
 
-define(['src/Player'], function(Player) {
+define(['src/player'], function(Player) {
 
     describe('Player', function() {
         var player;

@@ -1,4 +1,4 @@
-define(['src/Song'], function(Song) {
+define(['src/song'], function(Song) {
 	describe('Song', function() {
 
 		it('can create a Song', function() {
