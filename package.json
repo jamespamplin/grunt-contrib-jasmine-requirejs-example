@@ -15,7 +15,7 @@
         "test": "grunt test"
     },
     "devDependencies": {
-        "grunt-contrib-jasmine": "~0.4.0",
+        "grunt-contrib-jasmine": "~0.5.3",
         "grunt": "~0.4.0",
         "grunt-contrib-jshint": "~0.2.0",
         "grunt-template-jasmine-requirejs": "~0.1.2"
